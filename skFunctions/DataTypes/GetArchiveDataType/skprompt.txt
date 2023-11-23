@@ -1,0 +1,15 @@
+Rewrite the last message to reflect if the user is looking for a Data Type of ACTION, AUDIT, INCIDENT, for EVENT use INCIDENT and to ensure names are included
+at the beginning from the prompt in 'FirstName Surname' AND 'Surname, FirstName' format. Names must always be wrapped in quotes.
+
+DO NOT include user name in the output. DO NOT offer additional commentary and DO NOT return a list of possible rewritten intents, JUST PICK ONE. Where it's not clear what Data Type a user is requesting, you can omit this paramater completely.
+
+More than one Data Type can be included. Names must be wrapped in quotes
+----
+Examples:
+User: I'm looking for incidents where Joe Bloggs is a witness.
+Bot: (Data Type: Incident) ('Bloggs, Joe' or 'Joe Bloggs'); I'm looking for incidents where 'Joe Bloggs' is a witness.
+
+User: What audits has Jane Doe conducted in relation to ABC-2323?
+Bot: (Data Type: Audit) ('Jane Doe' or 'Doe, Jane'); What audits has 'Jane Doe' conducted in relation to ABC-2323?
+----
+{{$input}}
